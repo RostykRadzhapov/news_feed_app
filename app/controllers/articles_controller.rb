@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
+  load_and_authorize_resource find_by: :slug
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
@@ -46,6 +47,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :content, :link, images: [], videos: [])
+    params.require(:article).permit(:title, :content, :link, :public, images: [], videos: [])
   end
 end

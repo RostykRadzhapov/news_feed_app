@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :articles
   devise_for :users
 
-  root 'admin/users#index'
+  root 'articles#index'
 
   namespace :admin do
     resources :users
