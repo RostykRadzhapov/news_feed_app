@@ -17,6 +17,7 @@ Layout/LineLength:
   Max: 120
   Exclude:
     - 'config/initializers/devise.rb'
+    - 'config/initializers/link_thumbnailer.rb'
 
 Layout/HashAlignment:
   EnforcedColonStyle: table
