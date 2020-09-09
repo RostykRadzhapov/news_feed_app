@@ -10,36 +10,40 @@
       </ul>
     </div>
   <% end %>
+  <div class="container">
+    <div class="field form-group">
+      <%= form.label :title %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
-  <div>
-    <%= form.label :videos %>
-    <%= form.file_field :videos, multiple: true %>
-  </div>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :content %>
+      <%= form.text_area :content, class:"form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :link %>
+      <%= form.text_field :link, class: "form-control" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :images %>
+      <%= form.file_field :images, multiple: true %>
+    </div>
 
-  <div class="field">
-    <%= form.label :public %>
-    <%= form.check_box :public %>
-  </div>
+    <div class="field form-group">
+      <%= form.label :videos %>
+      <%= form.file_field :videos, multiple: true %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="field form-group">
+      <%= form.label :public %>
+      <%= form.check_box :public %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+      <%= link_to 'Back', articles_path %>
+    </div>
   </div>
 <% end %>

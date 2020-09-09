@@ -14,3 +14,12 @@
 
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
+
+.text-size {
+  font-size: 180%;
+  border: 2em
+}
+
+.width-40 {
+  width: 40%
+}
